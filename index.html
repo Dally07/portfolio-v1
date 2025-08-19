@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dally maminomenjanahary - Data Science & AI Portfolio</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-portrait" ></div>
+            <h1>Dally maminomenjanahary</h1>
+            <p class="hero-tagline">Data Science & AI Student • Transforming data into intelligent solutions • Building the future with code</p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate Data Science and AI student with a deep fascination for turning raw data into meaningful insights. My journey in technology began with curiosity about how machines can learn and make decisions, leading me to pursue advanced studies in artificial intelligence and machine learning.</p>
+                
+                <p>With expertise in Python, TensorFlow, and cutting-edge AI frameworks, I specialize in developing intelligent systems that solve real-world problems. From predictive analytics to computer vision, I'm constantly exploring new frontiers in artificial intelligence.</p>
+
+                <p>When I'm not coding or analyzing datasets, you'll find me contributing to open-source projects, participating in hackathons, or sharing knowledge with the tech community through blogs and workshops.</p>
+            </div>
+            <div class="about-visual"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('ai')">AI</button>
+            <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+            <button class="filter-btn" onclick="filterProjects('mobile')">Mobile</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="ai">
+                <h3>Neural Network Image Classifier</h3>
+                <p>Deep learning model for image recognition with 94% accuracy, built using TensorFlow and Keras for real-time classification of complex visual data.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">Keras</span>
+                    <span class="tech-tag">OpenCV</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="ai">
+                <h3>Sentiment Analysis Dashboard</h3>
+                <p>Real-time sentiment analysis tool processing social media data using NLP techniques and machine learning algorithms for brand monitoring.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">NLTK</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Streamlit</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <h3>Data Visualization Platform</h3>
+                <p>Interactive web application for data exploration and visualization, featuring dynamic charts and real-time data processing capabilities.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">D3.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="ai">
+                <h3>Predictive Analytics Engine</h3>
+                <p>Machine learning pipeline for forecasting business metrics with automated feature engineering and model selection capabilities.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Pandas</span>
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">Docker</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="mobile">
+                <h3>AI Assistant Mobile App</h3>
+                <p>Cross-platform mobile application integrating voice recognition and natural language processing for intelligent user interactions.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">TensorFlow Lite</span>
+                    <span class="tech-tag">Firebase</span>
+                    <span class="tech-tag">GraphQL</span>
+                </div>
+            </div>
+            <div class="project-card" data-category="web">
+                <h3>ML Model Deployment Platform</h3>
+                <p>Cloud-based platform for deploying and managing machine learning models with automated scaling and monitoring features.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Flask</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Kubernetes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills & Competences</h2>
+        <div class="skills-container">
+            <div class="skills-circle">
+                <div class="skill-card" style="transform: rotate(0deg) translate(200px) rotate(0deg);" onclick="expandSkill(this)">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                    <div class="skill-details">
+                        <h4>Python</h4>
+                        <p>Advanced proficiency in Python for data science, machine learning, and web development. Experience with NumPy, Pandas, and Matplotlib.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(45deg) translate(200px) rotate(-45deg);" onclick="expandSkill(this)">
+                    <i class="fas fa-brain"></i>
+                    <span>TensorFlow</span>
+                    <div class="skill-details">
+                        <h4>TensorFlow</h4>
+                        <p>Deep learning framework expertise for building neural networks, computer vision models, and natural language processing systems.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(90deg) translate(200px) rotate(-90deg);" onclick="expandSkill(this)">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                    <div class="skill-details">
+                        <h4>React</h4>
+                        <p>Modern frontend development with React, including hooks, context API, and component-based architecture for scalable applications.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(135deg) translate(200px) rotate(-135deg);" onclick="expandSkill(this)">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                    <div class="skill-details">
+                        <h4>SQL & Databases</h4>
+                        <p>Database design and optimization, complex query writing, and experience with PostgreSQL, MongoDB, and data warehousing.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(180deg) translate(200px) rotate(-180deg);" onclick="expandSkill(this)">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                    <div class="skill-details">
+                        <h4>Data Analytics</h4>
+                        <p>Statistical analysis, data visualization, and business intelligence. Expertise in creating actionable insights from complex datasets.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(225deg) translate(200px) rotate(-225deg);" onclick="expandSkill(this)">
+                    <i class="fab fa-aws"></i>
+                    <span>Cloud</span>
+                    <div class="skill-details">
+                        <h4>Cloud Computing</h4>
+                        <p>AWS and Azure cloud services, containerization with Docker, and scalable application deployment strategies.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(270deg) translate(200px) rotate(-270deg);" onclick="expandSkill(this)">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                    <div class="skill-details">
+                        <h4>Version Control</h4>
+                        <p>Advanced Git workflows, branching strategies, and collaborative development. Experience with GitHub Actions and CI/CD pipelines.</p>
+                    </div>
+                </div>
+                <div class="skill-card" style="transform: rotate(315deg) translate(200px) rotate(-315deg);" onclick="expandSkill(this)">
+                    <i class="fas fa-robot"></i>
+                    <span>ML Ops</span>
+                    <div class="skill-details">
+                        <h4>ML Operations</h4>
+                        <p>Model deployment, monitoring, and lifecycle management. Experience with MLflow, Kubeflow, and automated ML pipelines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Machine Learning Solutions</h3>
+                <p>Custom ML models and algorithms tailored to your business needs, from predictive analytics to recommendation systems.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Data Analysis & Visualization</h3>
+                <p>Transform complex datasets into actionable insights with interactive dashboards and comprehensive reporting.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>AI Application Development</h3>
+                <p>End-to-end development of intelligent applications integrating AI/ML capabilities with modern web technologies.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3>Consulting & Training</h3>
+                <p>Strategic AI consulting and hands-on training sessions to help teams implement data science solutions effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Let's Build Something Amazing Together</h3>
+                <p>I'm always excited to discuss new opportunities and innovative projects. Whether you're looking to implement AI solutions, analyze complex data, or build intelligent applications, I'm here to help turn your ideas into reality.</p>
+                
+                <div class="contact-details">
+                    <div style="margin: 30px 0;">
+                        <h4><i class="fas fa-envelope"></i> Email</h4>
+                        <p><a href="dallymaminomenjanahar@gmail.com" style="color: aliceblue;">dallymaminomenjanahar@gmail.com</a></p>
+                    </div>
+                    <div style="margin: 30px 0;">
+                        <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+                        <p>Fianarantsoa, MG</p>
+                    </div>
+                    <div style="margin: 30px 0;">
+                        <h4><i class="fas fa-clock"></i> Availability</h4>
+                        <p>Open for freelance projects and collaborations</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://wa.me/261330975317" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>

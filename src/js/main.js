@@ -10,6 +10,94 @@
             themeIcon.className = newTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
         }
 
+        // Menu mobile
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+         // Skills Category Toggle
+        function toggleSkillCategory(card) {
+            const isExpanded = card.classList.contains('expanded');
+            
+            // Close all other expanded cards
+            document.querySelectorAll('.skill-category-card.expanded').forEach(expandedCard => {
+                if (expandedCard !== card) {
+                    expandedCard.classList.remove('expanded');
+                }
+            });
+            
+            // Toggle current card
+            if (isExpanded) {
+                card.classList.remove('expanded');
+            } else {
+                card.classList.add('expanded');
+                
+                // Smooth scroll to show the expanded content
+                setTimeout(() => {
+                    card.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 400);
+            }
+        }
+
+        // JavaScript pour le carousel 3D
+let currentRotation = 0; 
+        let currentSlide = 0; 
+        const totalSlides = 4; 
+        function rotateCarousel(direction) { 
+            currentRotation += direction * 90; 
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides; 
+            const carousel = document.getElementById('skillsCarousel'); 
+            carousel.style.transform = `rotateY(${-currentRotation}deg)`; 
+            updateIndicators(); 
+        } 
+        
+        function goToSlide(slideIndex) { 
+            const rotationNeeded = slideIndex - currentSlide; 
+            rotateCarousel(rotationNeeded); 
+        } 
+        
+        function updateIndicators() { 
+            const indicators = document.querySelectorAll('.indicator'); 
+            indicators.forEach((indicator, index) => { 
+                indicator.classList.toggle('active', index === currentSlide); 
+            }
+        ); 
+    } // Support tactile pour mobile 
+    let startX = 0; 
+    let startY = 0; 
+    document.querySelector('.skills-carousel-container').addEventListener('touchstart', (e) => { 
+        startX = e.touches[0].clientX; 
+        startY = e.touches[0].clientY; 
+    }); 
+    
+    document.querySelector('.skills-carousel-container').addEventListener('touchend', (e) => { 
+        if (!startX || !startY) return; 
+        let endX = e.changedTouches[0].clientX; 
+        let endY = e.changedTouches[0].clientY; 
+        let diffX = startX - endX; 
+        let diffY = startY - endY; 
+        if (Math.abs(diffX) > Math.abs(diffY)) { 
+            if (Math.abs(diffX) > 50) { 
+                // Minimum swipe distance 
+                if (diffX > 0) { 
+                    rotateCarousel(1); 
+                    // Swipe left, rotate right 
+                    } else { 
+                        rotateCarousel(-1); 
+                        // Swipe right, rotate left 
+                        } 
+                    } 
+                } startX = 0; 
+                startY = 0; }); 
+                // Auto-rotation optionnelle (désactivée par défaut) 
+                setInterval(() => { 
+                     rotateCarousel(1); }, 5000); 
+
+
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -20,6 +108,12 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    
+                    // Fermer le menu mobile si ouvert
+                    const navLinks = document.querySelector('.nav-links');
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
                 }
             });
         });
@@ -66,7 +160,7 @@
         }, observerOptions);
 
         // Observe elements for animation
-        document.querySelectorAll('.section-title, .about-text, .about-visual, .project-card, .service-card').forEach(el => {
+        document.querySelectorAll('.section-title, .about-text, .about-visual, .project-card, .service-card, .skill-category-card').forEach(el => {
             observer.observe(el);
         });
 
@@ -98,34 +192,6 @@
             });
         }
 
-        // Skills Card Expansion
-        let expandedCard = null;
-
-        function expandSkill(card) {
-            if (expandedCard && expandedCard !== card) {
-                expandedCard.classList.remove('expanded');
-            }
-            
-            if (expandedCard === card) {
-                card.classList.remove('expanded');
-                expandedCard = null;
-                document.body.style.overflow = 'auto';
-            } else {
-                card.classList.add('expanded');
-                expandedCard = card;
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        // Close expanded skill card when clicking outside
-        document.addEventListener('click', (e) => {
-            if (expandedCard && !expandedCard.contains(e.target)) {
-                expandedCard.classList.remove('expanded');
-                expandedCard = null;
-                document.body.style.overflow = 'auto';
-            }
-        });
-
         // Contact Form Handling
         document.querySelector('.contact-form').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -146,43 +212,6 @@
                 }, 2000);
             }, 1500);
         });
-
-        // Mobile Skills Touch Support
-        if ('ontouchstart' in window) {
-            document.querySelector('.skills-circle').style.animation = 'none';
-            
-            let startX, startY;
-            const skillsContainer = document.querySelector('.skills-container');
-            
-            skillsContainer.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-            });
-            
-            skillsContainer.addEventListener('touchmove', (e) => {
-                e.preventDefault();
-            });
-            
-            skillsContainer.addEventListener('touchend', (e) => {
-                const endX = e.changedTouches[0].clientX;
-                const endY = e.changedTouches[0].clientY;
-                const diffX = startX - endX;
-                const diffY = startY - endY;
-                
-                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-                    // Swipe detected - rotate skills circle
-                    const circle = document.querySelector('.skills-circle');
-                    const currentRotation = parseInt(circle.style.transform?.match(/rotate\((-?\d+)deg\)/)?.[1] || '0');
-                    const newRotation = currentRotation + (diffX > 0 ? 45 : -45);
-                    circle.style.transform = `rotate(${newRotation}deg)`;
-                    circle.style.transition = 'transform 0.5s ease';
-                    
-                    setTimeout(() => {
-                        circle.style.transition = '';
-                    }, 500);
-                }
-            });
-        }
 
         // Parallax Effect for Hero Section
         window.addEventListener('scroll', () => {
@@ -212,6 +241,10 @@
                     card.classList.add('animate');
                 }, index * 150);
             });
+            
+            // Initialize carousel position
+            const carousel = document.getElementById('skillsCarousel');
+            carousel.style.transform = `rotateY(${currentRotation}deg)`;
         });
 
         // Add floating particles effect
@@ -219,8 +252,8 @@
             const particle = document.createElement('div');
             particle.style.cssText = `
                 position: fixed;
-                width: 4px;
-                height: 4px;
+                width: 8px;
+                height: 8px;
                 background: rgba(124, 58, 237, 0.3);
                 border-radius: 50%;
                 pointer-events: none;
@@ -234,7 +267,7 @@
             
             setTimeout(() => {
                 particle.remove();
-            }, 7000);
+            }, 10000);
         }
 
         // Add CSS for floating particles
@@ -250,4 +283,4 @@
         document.head.appendChild(style);
 
         // Create particles periodically
-        setInterval(createParticle, 2000);
+        setInterval(createParticle, 1000);

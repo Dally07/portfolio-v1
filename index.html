@@ -10,6 +10,9 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar">
+        <div class="navbar-brand">
+            <div class="logo" onclick="toggleMobileMenu()">DM</div>
+        </div>
         <ul class="nav-links">
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -24,7 +27,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <div class="hero-portrait" ></div>
+            <div class="hero-portrait"></div>
             <h1>Dally maminomenjanahary</h1>
             <p class="hero-tagline">Data Science & AI Student • Transforming data into intelligent solutions • Building the future with code</p>
             <a href="#projects" class="cta-button">Explore My Work</a>
@@ -57,63 +60,93 @@
         </div>
         <div class="projects-grid">
             <div class="project-card" data-category="ai">
-                <h3>Neural Network Image Classifier</h3>
-                <p>Deep learning model for image recognition with 94% accuracy, built using TensorFlow and Keras for real-time classification of complex visual data.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">Keras</span>
-                    <span class="tech-tag">OpenCV</span>
+                <div class="project-image">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Neural Network Image Classifier</h3>
+                    <p>Deep learning model for image recognition with 94% accuracy, built using TensorFlow and Keras for real-time classification of complex visual data.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">Python</span>
+                        <span class="tech-tag ">TensorFlow</span>
+                        <span class="tech-tag ">Keras</span>
+                        <span class="tech-tag ">OpenCV</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="ai">
-                <h3>Sentiment Analysis Dashboard</h3>
-                <p>Real-time sentiment analysis tool processing social media data using NLP techniques and machine learning algorithms for brand monitoring.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">NLTK</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                    <span class="tech-tag">Streamlit</span>
+                <div class="project-image">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Sentiment Analysis Dashboard</h3>
+                    <p>Real-time sentiment analysis tool processing social media data using NLP techniques and machine learning algorithms for brand monitoring.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">Python</span>
+                        <span class="tech-tag ">NLTK</span>
+                        <span class="tech-tag ">Scikit-learn</span>
+                        <span class="tech-tag ">Streamlit</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="web">
-                <h3>Data Visualization Platform</h3>
-                <p>Interactive web application for data exploration and visualization, featuring dynamic charts and real-time data processing capabilities.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">D3.js</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">MongoDB</span>
+                <div class="project-image">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Data Visualization Platform</h3>
+                    <p>Interactive web application for data exploration and visualization, featuring dynamic charts and real-time data processing capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">React</span>
+                        <span class="tech-tag ">D3.js</span>
+                        <span class="tech-tag ">Node.js</span>
+                        <span class="tech-tag ">MongoDB</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="ai">
-                <h3>Predictive Analytics Engine</h3>
-                <p>Machine learning pipeline for forecasting business metrics with automated feature engineering and model selection capabilities.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">XGBoost</span>
-                    <span class="tech-tag">Docker</span>
+                <div class="project-image">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Predictive Analytics Engine</h3>
+                    <p>Machine learning pipeline for forecasting business metrics with automated feature engineering and model selection capabilities.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">Python</span>
+                        <span class="tech-tag ">Pandas</span>
+                        <span class="tech-tag ">XGBoost</span>
+                        <span class="tech-tag ">Docker</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="mobile">
-                <h3>AI Assistant Mobile App</h3>
-                <p>Cross-platform mobile application integrating voice recognition and natural language processing for intelligent user interactions.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">React Native</span>
-                    <span class="tech-tag">TensorFlow Lite</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">GraphQL</span>
+                <div class="project-image">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="project-content">
+                    <h3>AI Assistant Mobile App</h3>
+                    <p>Cross-platform mobile application integrating voice recognition and natural language processing for intelligent user interactions.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">React Native</span>
+                        <span class="tech-tag ">TensorFlow Lite</span>
+                        <span class="tech-tag ">Firebase</span>
+                        <span class="tech-tag ">GraphQL</span>
+                    </div>
                 </div>
             </div>
             <div class="project-card" data-category="web">
-                <h3>ML Model Deployment Platform</h3>
-                <p>Cloud-based platform for deploying and managing machine learning models with automated scaling and monitoring features.</p>
-                <div class="project-tech">
-                    <span class="tech-tag">Flask</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">Kubernetes</span>
+                <div class="project-image">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="project-content">
+                    <h3>ML Model Deployment Platform</h3>
+                    <p>Cloud-based platform for deploying and managing machine learning models with automated scaling and monitoring features.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag ">Flask</span>
+                        <span class="tech-tag ">Docker</span>
+                        <span class="tech-tag ">AWS</span>
+                        <span class="tech-tag ">Kubernetes</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,72 +155,301 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <h2 class="section-title">Skills & Competences</h2>
-        <div class="skills-container">
-            <div class="skills-circle">
-                <div class="skill-card" style="transform: rotate(0deg) translate(200px) rotate(0deg);" onclick="expandSkill(this)">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                    <div class="skill-details">
-                        <h4>Python</h4>
-                        <p>Advanced proficiency in Python for data science, machine learning, and web development. Experience with NumPy, Pandas, and Matplotlib.</p>
+        
+        <div class="skills-carousel-container">
+            <div class="skills-carousel" id="skillsCarousel">
+                <!-- Frontend Development -->
+                <div class="skill-category-card carousel-item" data-category="0" onclick="toggleSkillCategory(this)">
+                    <div class="category-header">
+                        <div class="category-info">
+                            <div class="category-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div>
+                                <div class="category-title">Frontend Development</div>
+                                <div class="category-subtitle">User Interface & Experience</div>
+                            </div>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-preview">
+                        <div class="skill-icon react"><i class="fab fa-react"></i></div>
+                        <div class="skill-icon vue"><i class="fab fa-vuejs"></i></div>
+                        <div class="skill-icon javascript"><i class="fab fa-js-square"></i></div>
+                        <div class="skill-icon html"><i class="fab fa-html5"></i></div>
+                        <div class="skill-icon css"><i class="fab fa-css3-alt"></i></div>
+                    </div>
+
+                    <div class="skills-details">
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-react skill-item-icon react"></i>
+                                    <span class="skill-item-name">React</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Hooks, Context API</div>
+                                <a href="https://react.dev/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-vuejs skill-item-icon vue"></i>
+                                    <span class="skill-item-name">Vue.js</span>
+                                </div>
+                                <div class="skill-item-level">Intermediate • Composition API</div>
+                                <a href="https://vuejs.org/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-js-square skill-item-icon javascript"></i>
+                                    <span class="skill-item-name">JavaScript</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • ES6+, TypeScript</div>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-sass skill-item-icon sass"></i>
+                                    <span class="skill-item-name">SCSS/Sass</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Mixins, Functions</div>
+                                <a href="https://sass-lang.com/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card" style="transform: rotate(45deg) translate(200px) rotate(-45deg);" onclick="expandSkill(this)">
-                    <i class="fas fa-brain"></i>
-                    <span>TensorFlow</span>
-                    <div class="skill-details">
-                        <h4>TensorFlow</h4>
-                        <p>Deep learning framework expertise for building neural networks, computer vision models, and natural language processing systems.</p>
+
+                <!-- Backend Development -->
+                <div class="skill-category-card carousel-item" data-category="1" onclick="toggleSkillCategory(this)">
+                    <div class="category-header">
+                        <div class="category-info">
+                            <div class="category-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <div class="category-title">Backend Development</div>
+                                <div class="category-subtitle">Server & Database Management</div>
+                            </div>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-preview">
+                        <div class="skill-icon python"><i class="fab fa-python"></i></div>
+                        <div class="skill-icon node"><i class="fab fa-node-js"></i></div>
+                        <div class="skill-icon postgresql"><i class="fas fa-database"></i></div>
+                        <div class="skill-icon mongodb"><i class="fas fa-leaf"></i></div>
+                    </div>
+
+                    <div class="skills-details">
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-python skill-item-icon python"></i>
+                                    <span class="skill-item-name">Python</span>
+                                </div>
+                                <div class="skill-item-level">Expert • Django, Flask, FastAPI</div>
+                                <a href="https://docs.python.org/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-node-js skill-item-icon node"></i>
+                                    <span class="skill-item-name">Node.js</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Express, NestJS</div>
+                                <a href="https://nodejs.org/en/docs/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-database skill-item-icon postgresql"></i>
+                                    <span class="skill-item-name">PostgreSQL</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Complex queries, Optimization</div>
+                                <a href="https://www.postgresql.org/docs/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-leaf skill-item-icon mongodb"></i>
+                                    <span class="skill-item-name">MongoDB</span>
+                                </div>
+                                <div class="skill-item-level">Intermediate • Aggregation, Indexing</div>
+                                <a href="https://docs.mongodb.com/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card" style="transform: rotate(90deg) translate(200px) rotate(-90deg);" onclick="expandSkill(this)">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                    <div class="skill-details">
-                        <h4>React</h4>
-                        <p>Modern frontend development with React, including hooks, context API, and component-based architecture for scalable applications.</p>
+
+                <!-- AI & Machine Learning -->
+                <div class="skill-category-card carousel-item" data-category="2" onclick="toggleSkillCategory(this)">
+                    <div class="category-header">
+                        <div class="category-info">
+                            <div class="category-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <div class="category-title">AI & Machine Learning</div>
+                                <div class="category-subtitle">Intelligent Systems & Analytics</div>
+                            </div>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-preview">
+                        <div class="skill-icon tensorflow"><i class="fas fa-brain"></i></div>
+                        <div class="skill-icon pytorch"><i class="fas fa-fire"></i></div>
+                        <div class="skill-icon scikit-learn"><i class="fas fa-chart-line"></i></div>
+                        <div class="skill-icon opencv"><i class="fas fa-eye"></i></div>
+                    </div>
+
+                    <div class="skills-details">
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-brain skill-item-icon tensorflow"></i>
+                                    <span class="skill-item-name">TensorFlow</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Deep Learning, Keras</div>
+                                <a href="https://www.tensorflow.org/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-fire skill-item-icon pytorch"></i>
+                                    <span class="skill-item-name">PyTorch</span>
+                                </div>
+                                <div class="skill-item-level">Intermediate • Neural Networks</div>
+                                <a href="https://pytorch.org/docs/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-chart-line skill-item-icon scikit-learn"></i>
+                                    <span class="skill-item-name">Scikit-learn</span>
+                                </div>
+                                <div class="skill-item-level">Expert • ML Algorithms, Pipeline</div>
+                                <a href="https://scikit-learn.org/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-eye skill-item-icon opencv"></i>
+                                    <span class="skill-item-name">OpenCV</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Computer Vision</div>
+                                <a href="https://docs.opencv.org/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card" style="transform: rotate(135deg) translate(200px) rotate(-135deg);" onclick="expandSkill(this)">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
-                    <div class="skill-details">
-                        <h4>SQL & Databases</h4>
-                        <p>Database design and optimization, complex query writing, and experience with PostgreSQL, MongoDB, and data warehousing.</p>
+
+                <!-- DevOps & Tools -->
+                <div class="skill-category-card carousel-item" data-category="3" onclick="toggleSkillCategory(this)">
+                    <div class="category-header">
+                        <div class="category-info">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <div>
+                                <div class="category-title">DevOps & Tools</div>
+                                <div class="category-subtitle">Development & Deployment</div>
+                            </div>
+                        </div>
+                        <div class="expand-indicator">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-preview">
+                        <div class="skill-icon docker"><i class="fab fa-docker"></i></div>
+                        <div class="skill-icon aws"><i class="fab fa-aws"></i></div>
+                        <div class="skill-icon git"><i class="fab fa-git-alt"></i></div>
+                        <div class="skill-icon kubernetes"><i class="fas fa-dharmachakra"></i></div>
+                    </div>
+
+                    <div class="skills-details">
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-docker skill-item-icon docker"></i>
+                                    <span class="skill-item-name">Docker</span>
+                                </div>
+                                <div class="skill-item-level">Advanced • Containerization, Compose</div>
+                                <a href="https://docs.docker.com/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-aws skill-item-icon aws"></i>
+                                    <span class="skill-item-name">AWS</span>
+                                </div>
+                                <div class="skill-item-level">Intermediate • EC2, S3, Lambda</div>
+                                <a href="https://docs.aws.amazon.com/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fab fa-git-alt skill-item-icon git"></i>
+                                    <span class="skill-item-name">Git</span>
+                                </div>
+                                <div class="skill-item-level">Expert • Workflows, Branching</div>
+                                <a href="https://git-scm.com/docs" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <i class="fas fa-dharmachakra skill-item-icon kubernetes"></i>
+                                    <span class="skill-item-name">Kubernetes</span>
+                                </div>
+                                <div class="skill-item-level">Beginner • Orchestration, Pods</div>
+                                <a href="https://kubernetes.io/docs/" target="_blank" class="skill-item-link">
+                                    Documentation <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-card" style="transform: rotate(180deg) translate(200px) rotate(-180deg);" onclick="expandSkill(this)">
-                    <i class="fas fa-chart-line"></i>
-                    <span>Analytics</span>
-                    <div class="skill-details">
-                        <h4>Data Analytics</h4>
-                        <p>Statistical analysis, data visualization, and business intelligence. Expertise in creating actionable insights from complex datasets.</p>
-                    </div>
-                </div>
-                <div class="skill-card" style="transform: rotate(225deg) translate(200px) rotate(-225deg);" onclick="expandSkill(this)">
-                    <i class="fab fa-aws"></i>
-                    <span>Cloud</span>
-                    <div class="skill-details">
-                        <h4>Cloud Computing</h4>
-                        <p>AWS and Azure cloud services, containerization with Docker, and scalable application deployment strategies.</p>
-                    </div>
-                </div>
-                <div class="skill-card" style="transform: rotate(270deg) translate(200px) rotate(-270deg);" onclick="expandSkill(this)">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
-                    <div class="skill-details">
-                        <h4>Version Control</h4>
-                        <p>Advanced Git workflows, branching strategies, and collaborative development. Experience with GitHub Actions and CI/CD pipelines.</p>
-                    </div>
-                </div>
-                <div class="skill-card" style="transform: rotate(315deg) translate(200px) rotate(-315deg);" onclick="expandSkill(this)">
-                    <i class="fas fa-robot"></i>
-                    <span>ML Ops</span>
-                    <div class="skill-details">
-                        <h4>ML Operations</h4>
-                        <p>Model deployment, monitoring, and lifecycle management. Experience with MLflow, Kubeflow, and automated ML pipelines.</p>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="rotateCarousel(-1)">❮</button>
+                <button class="carousel-btn next" onclick="rotateCarousel(1)">❯</button>
+            </div>
+            
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="goToSlide(0)"></span>
+                <span class="indicator" onclick="goToSlide(1)"></span>
+                <span class="indicator" onclick="goToSlide(2)"></span>
+                <span class="indicator" onclick="goToSlide(3)"></span>
             </div>
         </div>
     </section>
@@ -253,7 +515,7 @@
                 <div class="contact-details">
                     <div style="margin: 30px 0;">
                         <h4><i class="fas fa-envelope"></i> Email</h4>
-                        <p><a href="dallymaminomenjanahar@gmail.com" style="color: aliceblue;">dallymaminomenjanahar@gmail.com</a></p>
+                        <p><a href="mailto:dallymaminomenjanahar@gmail.com">dallymaminomenjanahar@gmail.com</a></p>
                     </div>
                     <div style="margin: 30px 0;">
                         <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
@@ -275,7 +537,6 @@
             </div>
         </div>
     </section>
-
 
     <script src="src/js/main.js"></script>
 </body>

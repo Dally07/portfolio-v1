@@ -1,4 +1,5 @@
-* {
+
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -813,10 +814,13 @@
             .navbar {
                 position: fixed;
                 top: 20px;
-                right: 20px;
                 left: 20px;
-                justify-content: space-between;
-                padding: 15px 20px;
+                right: auto;
+                width: auto;
+                justify-content: flex-start;
+                padding: 15px;
+                transform: none;
+                z-index: 1001;
             }
             
             .navbar-brand .logo {
@@ -834,8 +838,8 @@
             .nav-links {
                 position: fixed;
                 top: 0;
-                right: -100%;
-                width: 70%;
+                right: 200%;
+                width: 50px;
                 height: 100vh;
                 background: var(--bg-primary);
                 backdrop-filter: blur(20px);
@@ -845,15 +849,42 @@
                 align-items: center;
                 justify-content: center;
                 gap: 30px;
+                z-index: 1000;
+                margin: 0;
+                padding: 0;
             }
             
             .nav-links.active {
                 right: 0;
+                box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
             }
 
             .nav-links a {
                 font-size: 18px;
                 padding: 12px 24px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links .theme-toggle {
+                margin-top: 20px;
+            }
+
+            /* Ajout d'un overlay quand le menu est ouvert */
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(5px);
+                z-index: 999;
+            }
+            
+            .nav-overlay.active {
+                display: block;
             }
 
             .about-content,
@@ -1024,3 +1055,4 @@
         .skill-item-link i {
             font-size: 0.7rem;
         }
+  

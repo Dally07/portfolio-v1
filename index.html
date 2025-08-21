@@ -14,14 +14,15 @@
             <div class="logo" onclick="toggleMobileMenu()">DM</div>
         </div>
         <ul class="nav-links">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero" class="active" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+            <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+            <li><a href="#services onclick="closeMobileMenu()"">Services</a></li>
+            <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
             <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
         </ul>
+        <div class="nav-overlay" onclick="closeMobileMenu()"></div>
     </nav>
 
     <!-- Hero Section -->
@@ -538,6 +539,6 @@
         </div>
     </section>
 
-    <script src="src/js/main.js"></script>
+   <script src="src/js/main.js"></script>
 </body>
 </html>

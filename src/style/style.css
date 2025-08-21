@@ -814,9 +814,9 @@
             .navbar {
                 position: fixed;
                 top: 20px;
-                left: 20px;
-                right: auto;
-                width: auto;
+                left: 5px;
+                right: 0;
+                width: 100%;
                 justify-content: flex-start;
                 padding: 15px;
                 transform: none;
@@ -836,10 +836,11 @@
             }
             
             .nav-links {
-                position: fixed;
+                position: absolute;
                 top: 0;
-                right: 200%;
-                width: 50px;
+                right: -100%;   /* on le cache à droite au départ */
+                width: 60%;     /* largeur raisonnable (80% de l’écran) */
+                max-width: 300px;
                 height: 100vh;
                 background: var(--bg-primary);
                 backdrop-filter: blur(20px);
@@ -849,14 +850,13 @@
                 align-items: center;
                 justify-content: center;
                 gap: 30px;
-                z-index: 1000;
                 margin: 0;
-                padding: 0;
-            }
-            
-            .nav-links.active {
-                right: 0;
+                padding: 60px 20px 20px;
                 box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .nav-links.active {
+                right: 0;   /* affichage quand actif */
             }
 
             .nav-links a {
@@ -876,8 +876,8 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
-                height: 100%;
+                width: auto;
+                height: auto;
                 background: rgba(0, 0, 0, 0.5);
                 backdrop-filter: blur(5px);
                 z-index: 999;

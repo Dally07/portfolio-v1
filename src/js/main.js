@@ -13,7 +13,15 @@
         // Menu mobile
         function toggleMobileMenu() {
             const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.nav-overlay');
+            
             navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            document.querySelector('.nav-links').classList.remove('active');
+            document.querySelector('.nav-overlay').classList.remove('active');
         }
 
          // Skills Category Toggle
@@ -94,8 +102,8 @@ let currentRotation = 0;
                 } startX = 0; 
                 startY = 0; }); 
                 // Auto-rotation optionnelle (désactivée par défaut) 
-                setInterval(() => { 
-                     rotateCarousel(1); }, 5000); 
+                // setInterval(() => { 
+                //      rotateCarousel(1); }, 15000); 
 
 
         // Smooth Scrolling
